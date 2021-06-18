@@ -37,7 +37,6 @@ func (tp *ThreadPool) Run() {
 }
 
 func (tp *ThreadPool) worker() {
-	// TODO defer
 	defer func() {
 		if err := recover(); err != nil {
 			// TODO 处理日志
